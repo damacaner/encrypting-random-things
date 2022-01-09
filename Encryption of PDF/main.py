@@ -12,6 +12,11 @@ for index in range(number):
     out.addPage(page)
     #Adding all pages in number range to new pdf file
 password = "tekeglencem31"
-out.encrypt(password)
-with open("crash_report_encrypted.pdf","wb") as f:
-    out.write(f) #Write pages to crash_report_encrypted.pdf
+print("Please enter the password of the pdf file> ")
+encryptattempt = input()
+if password == encryptattempt:
+    with open("crash_report_encrypted.pdf", "wb") as f:
+        out.write(f)  # Write pages to crash_report_encrypted.pdf
+else:
+    print("Alexa Intruder Alert")
+    print("Just kidding")
