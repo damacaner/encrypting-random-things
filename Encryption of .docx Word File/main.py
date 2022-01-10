@@ -39,8 +39,8 @@ with open("filekey.key", "rb") as filekey:
     key = filekey.read()
 fernet = Fernet(key)
 os.chdir(r"C:\Users\emosc\OneDrive\Belgeler") #Annoying code at line 32 saves the document to only Documents folder.
-shutil.copy("1697.docx", r"C:\Users\emosc\PycharmProjects\pythonProject6") #Copy that document and yeet it to project folder.
-os.chdir(r"C:\Users\emosc\PycharmProjects\pythonProject6") #Come back to project folder.
+shutil.copy("1697.docx", r"C:\Users\emosc\PycharmProjects\GithubPushs\encrypting-random-things\Encryption of .docx Word File") #Copy that document and yeet it to project folder.
+os.chdir(r"C:\Users\emosc\PycharmProjects\GithubPushs\encrypting-random-things\Encryption of .docx Word File") #Come back to project folder.
 with open("1697.docx","rb") as file:
     original = file.read()
 encrypteddocx = fernet.encrypt(original) #Encrypt the file
